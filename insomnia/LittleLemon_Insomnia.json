@@ -1,0 +1,477 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2026-11-16T00:00:00.000Z",
+  "__export_source": "insomnia.desktop.app:v2024",
+  "resources": [
+    {
+      "_id": "wrk_littlelemon",
+      "parentId": null,
+      "modified": 1700000000,
+      "created": 1700000000,
+      "name": "Little Lemon Django REST API",
+      "description": "API requests for Little Lemon peer review",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "env_littlelemon",
+      "parentId": "wrk_littlelemon",
+      "modified": 1700000000,
+      "created": 1700000000,
+      "name": "Base Environment",
+      "data": {
+        "base_url": "http://127.0.0.1:8000",
+        "token": "PASTE_TOKEN_HERE",
+        "menu_id": 1,
+        "booking_id": 1
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "base_url",
+          "token",
+          "menu_id",
+          "booking_id"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1,
+      "_type": "environment"
+    },
+    {
+      "_id": "req_Home",
+      "parentId": "wrk_littlelemon",
+      "modified": 1700000000,
+      "created": 1700000000,
+      "url": "{{ _.base_url }}/",
+      "name": "Home",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": 0,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_Health",
+      "parentId": "wrk_littlelemon",
+      "modified": 1700000000,
+      "created": 1700000000,
+      "url": "{{ _.base_url }}/api/health/",
+      "name": "Health",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": 0,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_List_Menu",
+      "parentId": "wrk_littlelemon",
+      "modified": 1700000000,
+      "created": 1700000000,
+      "url": "{{ _.base_url }}/api/menu/",
+      "name": "List Menu",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": 0,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_Get_Menu_Item",
+      "parentId": "wrk_littlelemon",
+      "modified": 1700000000,
+      "created": 1700000000,
+      "url": "{{ _.base_url }}/api/menu/{{ _.menu_id }}/",
+      "name": "Get Menu Item",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": 0,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_Register_User",
+      "parentId": "wrk_littlelemon",
+      "modified": 1700000000,
+      "created": 1700000000,
+      "url": "{{ _.base_url }}/api/registration/",
+      "name": "Register User",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"username\": \"student1\",\n  \"email\": \"student1@example.com\",\n  \"password\": \"SecurePass479!\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 0,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_Login_Get_Token",
+      "parentId": "wrk_littlelemon",
+      "modified": 1700000000,
+      "created": 1700000000,
+      "url": "{{ _.base_url }}/api/token/",
+      "name": "Login Get Token",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"username\": \"student1\",\n  \"password\": \"SecurePass479!\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 0,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_List_My_Bookings",
+      "parentId": "wrk_littlelemon",
+      "modified": 1700000000,
+      "created": 1700000000,
+      "url": "{{ _.base_url }}/api/bookings/",
+      "name": "List My Bookings",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Token {{ _.token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 0,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_Create_Booking",
+      "parentId": "wrk_littlelemon",
+      "modified": 1700000000,
+      "created": 1700000000,
+      "url": "{{ _.base_url }}/api/bookings/",
+      "name": "Create Booking",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"name\": \"Amina\",\n  \"email\": \"amina@example.com\",\n  \"no_of_guests\": 4,\n  \"booking_date\": \"2027-02-12\",\n  \"booking_time\": \"19:30:00\",\n  \"special_requests\": \"Near a window\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Token {{ _.token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 0,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_Get_Booking",
+      "parentId": "wrk_littlelemon",
+      "modified": 1700000000,
+      "created": 1700000000,
+      "url": "{{ _.base_url }}/api/bookings/{{ _.booking_id }}/",
+      "name": "Get Booking",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Token {{ _.token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 0,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_Update_Booking",
+      "parentId": "wrk_littlelemon",
+      "modified": 1700000000,
+      "created": 1700000000,
+      "url": "{{ _.base_url }}/api/bookings/{{ _.booking_id }}/",
+      "name": "Update Booking",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"no_of_guests\": 5\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Token {{ _.token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 0,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_Delete_Booking",
+      "parentId": "wrk_littlelemon",
+      "modified": 1700000000,
+      "created": 1700000000,
+      "url": "{{ _.base_url }}/api/bookings/{{ _.booking_id }}/",
+      "name": "Delete Booking",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Token {{ _.token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 0,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_Create_Menu_Staff",
+      "parentId": "wrk_littlelemon",
+      "modified": 1700000000,
+      "created": 1700000000,
+      "url": "{{ _.base_url }}/api/menu/",
+      "name": "Create Menu Staff",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"title\": \"Chef Special\",\n  \"description\": \"Seasonal special\",\n  \"price\": \"20.00\",\n  \"inventory\": 5,\n  \"category\": \"Main\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Token {{ _.token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 0,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_Update_Menu_Staff",
+      "parentId": "wrk_littlelemon",
+      "modified": 1700000000,
+      "created": 1700000000,
+      "url": "{{ _.base_url }}/api/menu/{{ _.menu_id }}/",
+      "name": "Update Menu Staff",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"price\": \"21.00\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Token {{ _.token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 0,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_Delete_Menu_Staff",
+      "parentId": "wrk_littlelemon",
+      "modified": 1700000000,
+      "created": 1700000000,
+      "url": "{{ _.base_url }}/api/menu/{{ _.menu_id }}/",
+      "name": "Delete Menu Staff",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Token {{ _.token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 0,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_Logout",
+      "parentId": "wrk_littlelemon",
+      "modified": 1700000000,
+      "created": 1700000000,
+      "url": "{{ _.base_url }}/api/logout/",
+      "name": "Logout",
+      "description": "",
+      "method": "POST",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Token {{ _.token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 0,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    }
+  ]
+}

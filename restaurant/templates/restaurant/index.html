@@ -1,0 +1,39 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Little Lemon is a cozy Mediterranean restaurant." />
+  <title>Little Lemon | Mediterranean Kitchen</title>
+  <link rel="stylesheet" href="{% static 'css/site.css' %}" />
+</head>
+<body>
+  <header class="header">
+    <div class="brand"><span class="lemon">●</span> LITTLE LEMON</div>
+    <nav><a href="#about">About</a><a href="#menu">Menu</a><a href="#api">API</a></nav>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">WELCOME TO LITTLE LEMON</div>
+        <h1>A little taste<br /><em>of the Mediterranean.</em></h1>
+        <p>Fresh flavors, warm hospitality, and delicious food made with care. Explore our menu and booking API.</p>
+        <a class="button" href="#menu">Explore the Menu <span>↗</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true"><div class="plate"><div class="salad"><span>✦</span></div></div><div class="sticker">FRESH<br />DAILY</div></div>
+    </section>
+    <section class="intro" id="about"><p>OUR STORY</p><h2>Good food.<br />Better together.</h2><div>We’re a neighborhood restaurant celebrating the best of Mediterranean comfort food. Our sample Django application serves this page and provides a working REST API.</div></section>
+    <section class="menu-section" id="menu">
+      <div class="section-heading"><div><span class="eyebrow">MADE WITH LOVE</span><h2>Our favorites</h2></div><p>Sample menu items are available after running <code>python manage.py seed_menu</code>.</p></div>
+      <div class="menu-grid">
+        <article class="dish"><div class="dish-icon">🥗</div><div class="dish-title">Greek Salad <span>$12.50</span></div><p>Feta, olives, tomato & fresh cucumber.</p></article>
+        <article class="dish"><div class="dish-icon">🍝</div><div class="dish-title">Lemon Pasta <span>$16.50</span></div><p>Bright lemon, parmesan & garden herbs.</p></article>
+        <article class="dish"><div class="dish-icon">🍋</div><div class="dish-title">Lemon Cake <span>$7.50</span></div><p>Soft citrus sponge, baked in-house.</p></article>
+      </div>
+    </section>
+    <section class="api-section" id="api"><div><span class="eyebrow">BUILT WITH DJANGO REST FRAMEWORK</span><h2>Explore the API</h2><p>Menu items are public. Register and use a token to manage your own table reservations.</p></div><div class="api-links"><a href="/api/menu/">GET /api/menu/ ↗</a><a href="/api/health/">GET /api/health/ ↗</a><a href="/api/bookings/">GET /api/bookings/ ↗</a></div></section>
+  </main>
+  <footer><span>© Little Lemon · Django Learning Project</span><span>Made with care 🍋</span></footer>
+</body>
+</html>
